@@ -1,0 +1,30 @@
+GITHUB + HACS SETUP
+
+A ZIP file by itself cannot be installed as a HACS custom repository.
+HACS needs a GitHub repository URL.
+
+1. Sign in to GitHub.
+2. Create a new PUBLIC repository named:
+   rd03d-radar-card
+3. Unzip this package.
+4. Upload the CONTENTS of the rd03d-radar-card folder to the repository root.
+   The GitHub repository root should directly contain:
+   - dist/
+   - examples/
+   - .github/
+   - hacs.json
+   - README.md
+   - info.md
+   - LICENSE
+5. Commit the files.
+6. In GitHub, create a release/tag named v1.0.0.
+7. In Home Assistant:
+   HACS > Dashboard > three-dot menu > Custom repositories
+8. Paste your GitHub repository URL and select category Dashboard.
+9. Install RD-03D Radar Card.
+10. Refresh the browser.
+11. Add a Manual dashboard card using examples/dashboard.yaml.
+
+If HACS does not add the resource automatically, add:
+ /hacsfiles/rd03d-radar-card/rd03d-radar-card.js
+as a JavaScript module under Settings > Dashboards > Resources.

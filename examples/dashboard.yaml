@@ -1,0 +1,44 @@
+type: custom:rd03d-radar-card
+title: Front Walkway Radar
+max_range: 30
+show_sweep: true
+show_trails: true
+trail_length: 18
+update_interval: 250
+
+# Change this if Home Assistant created a different entity ID.
+people_count: sensor.radar2_people_detected
+
+targets:
+  - name: Person 1
+    color: "#00ff66"
+    presence: binary_sensor.radar2_person_1_presence
+    x: sensor.radar2_person_1_x_position
+    y: sensor.radar2_person_1_y_position
+    distance: sensor.radar2_person_1_distance
+    angle: sensor.radar2_person_1_angle
+    speed: sensor.radar2_person_1_speed
+    direction: sensor.radar2_person_1_direction
+    movement: sensor.radar2_person_1_movement
+
+  - name: Person 2
+    color: "#00d9ff"
+    presence: binary_sensor.radar2_person_2_presence
+    x: sensor.radar2_person_2_x_position
+    y: sensor.radar2_person_2_y_position
+    distance: sensor.radar2_person_2_distance
+    angle: sensor.radar2_person_2_angle
+    speed: sensor.radar2_person_2_speed
+    direction: sensor.radar2_person_2_direction
+    movement: sensor.radar2_person_2_movement
+
+  - name: Person 3
+    color: "#ffcf33"
+    presence: binary_sensor.radar2_person_3_presence
+    x: sensor.radar2_person_3_x_position
+    y: sensor.radar2_person_3_y_position
+    distance: sensor.radar2_person_3_distance
+    angle: sensor.radar2_person_3_angle
+    speed: sensor.radar2_person_3_speed
+    direction: sensor.radar2_person_3_direction
+    movement: sensor.radar2_person_3_movement
